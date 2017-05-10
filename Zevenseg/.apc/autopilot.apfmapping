@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="Zevenseg.cpp" path="C:\Users\11401393\Desktop\bachelorproef\VivadoHLS\Demo\Zevenseg.cpp"/>
+    <originFiles name="Zevenseg.h" path="C:\Users\11401393\Desktop\bachelorproef\VivadoHLS\Demo\Zevenseg.h"/>
+  </source>
+  <testbench>
+    <originFiles name="Zevenseg_tb.cpp" path="C:\Users\11401393\Desktop\bachelorproef\VivadoHLS\Demo\Zevenseg_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

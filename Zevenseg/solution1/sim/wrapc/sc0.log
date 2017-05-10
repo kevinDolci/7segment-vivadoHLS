@@ -1,0 +1,5 @@
+   Build using "C:/Xilinx/Vivado_HLS/2016.4/msys/bin/g++.exe"
+   Compiling Zevenseg.cpp_pre.cpp.tb.cpp
+   Compiling Zevenseg_tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_Zevenseg.cpp
+   Generating cosim.tv.exe

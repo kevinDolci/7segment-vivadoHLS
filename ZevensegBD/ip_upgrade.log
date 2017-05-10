@@ -1,0 +1,723 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed May 10 10:10:09 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Zevenseg_0_1 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1705100934) to (Rev. 1705101009)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed May 10 09:35:50 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Zevenseg_0_1 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1705091120) to (Rev. 1705100934)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Tue May 09 11:21:31 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Zevenseg_0_1 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1704121941) to (Rev. 1705091120)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Apr 12 19:42:09 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Zevenseg_0_1 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1704121452) to (Rev. 1704121941)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Apr 12 14:53:41 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Zevenseg_0_1 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1704121435) to (Rev. 1704121452)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Apr 12 14:35:59 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_Zevenseg_0_1 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1704121422) to (Rev. 1704121435)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_Zevenseg_0_1'.
+
+
+-Upgrade has removed interface 'sw_V'
+
+-Upgrade has added interface 'sw' (xilinx.com:signal:data:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_Zevenseg_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 'sw_V'
+
+-Upgrade has added port 'sw'
+
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Apr 12 13:22:10 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1704121301) to (Rev. 1704121320)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_Zevenseg_0_0'.
+
+
+-Upgrade has removed interface 'input_V'
+
+-Upgrade has added interface 'sw' (xilinx.com:signal:data:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_Zevenseg_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'input_V_dout'
+
+-Upgrade has removed port 'input_V_empty_n'
+
+-Upgrade has removed port 'input_V_read'
+
+-Upgrade has added port 'sw'
+
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Apr 12 13:02:43 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1704121240) to (Rev. 1704121301)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_Zevenseg_0_0'.
+
+
+-Upgrade has removed interface 'sw'
+
+-Upgrade has added interface 'input_V' (xilinx.com:interface:acc_fifo_read:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_Zevenseg_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'sw'
+
+-Upgrade has added port 'input_V_dout'
+
+-Upgrade has added port 'input_V_empty_n'
+
+-Upgrade has added port 'input_V_read'
+
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Apr 12 12:41:20 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703311529) to (Rev. 1704121240)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Fri Mar 31 15:30:14 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703311453) to (Rev. 1703311529)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_Zevenseg_0_0'.
+
+
+-Upgrade has removed interface 'sw_V'
+
+-Upgrade has added interface 'sw' (xilinx.com:signal:data:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_Zevenseg_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'sw_V_dout'
+
+-Upgrade has removed port 'sw_V_empty_n'
+
+-Upgrade has removed port 'sw_V_read'
+
+-Upgrade has added port 'sw'
+
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Fri Mar 31 14:54:32 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703311425) to (Rev. 1703311453)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_Zevenseg_0_0'.
+
+
+-Upgrade has removed interface 'display'
+
+-Upgrade has removed interface 'led'
+
+-Upgrade has removed interface 'sw'
+
+-Upgrade has added interface 'display_V' (xilinx.com:signal:data:1.0)
+
+-Upgrade has added interface 'led_V' (xilinx.com:signal:data:1.0)
+
+-Upgrade has added interface 'sw_V' (xilinx.com:interface:acc_fifo_read:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_Zevenseg_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'display'
+
+-Upgrade has removed port 'display_ap_vld'
+
+-Upgrade has removed port 'led'
+
+-Upgrade has removed port 'led_ap_vld'
+
+-Upgrade has removed port 'sw'
+
+-Upgrade has added port 'display_V'
+
+-Upgrade has added port 'display_V_ap_vld'
+
+-Upgrade has added port 'led_V'
+
+-Upgrade has added port 'led_V_ap_vld'
+
+-Upgrade has added port 'sw_V_dout'
+
+-Upgrade has added port 'sw_V_empty_n'
+
+-Upgrade has added port 'sw_V_read'
+
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Fri Mar 31 14:26:17 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703311403) to (Rev. 1703311425)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Fri Mar 31 14:05:06 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703311238) to (Rev. 1703311403)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Fri Mar 31 12:38:48 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703311229) to (Rev. 1703311238)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Fri Mar 31 12:30:10 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703311224) to (Rev. 1703311229)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Fri Mar 31 12:25:23 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703311145) to (Rev. 1703311224)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Fri Mar 31 11:46:24 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703311113) to (Rev. 1703311145)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_Zevenseg_0_0'.
+
+
+-Upgrade has removed interface 'value_r_i'
+
+-Upgrade has removed interface 'value_r_o'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_Zevenseg_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'value_r_i'
+
+-Upgrade has removed port 'value_r_o'
+
+-Upgrade has removed port 'value_r_o_ap_vld'
+
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Fri Mar 31 11:14:24 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703311052) to (Rev. 1703311113)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_Zevenseg_0_0'.
+
+
+-Upgrade has removed interface 'prev_value'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_Zevenseg_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'prev_value'
+
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Fri Mar 31 10:53:19 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703291131) to (Rev. 1703311052)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_Zevenseg_0_0'.
+
+
+-Upgrade has removed interface 'buttons'
+
+-Upgrade has added interface 'prev_value' (xilinx.com:signal:data:1.0)
+
+-Upgrade has added interface 'value_r_i' (xilinx.com:signal:data:1.0)
+
+-Upgrade has added interface 'value_r_o' (xilinx.com:signal:data:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_Zevenseg_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'buttons'
+
+-Upgraded port 'sw' width 1 differs from original width 4
+
+-Upgrade has added port 'prev_value'
+
+-Upgrade has added port 'value_r_i'
+
+-Upgrade has added port 'value_r_o'
+
+-Upgrade has added port 'value_r_o_ap_vld'
+
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Mar 29 11:32:22 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703291042) to (Rev. 1703291131)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Mar 29 10:44:22 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703291006) to (Rev. 1703291042)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_Zevenseg_0_0'.
+
+
+-Upgrade has added interface 'led' (xilinx.com:signal:data:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_Zevenseg_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'buttons' width 4 differs from original width 1
+
+-Upgrade has added port 'led'
+
+-Upgrade has added port 'led_ap_vld'
+
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Mar 29 10:07:18 2017
+| Host         : 5CG4363RFZ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_Zevenseg_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_Zevenseg_0_0 (xilinx.com:hls:Zevenseg:1.0) from (Rev. 1703290933) to (Rev. 1703291006)
+

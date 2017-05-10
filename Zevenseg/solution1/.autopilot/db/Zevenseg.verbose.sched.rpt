@@ -1,0 +1,347 @@
+
+
+================================================================
+== Vivado HLS Report for 'Zevenseg'
+================================================================
+* Date:           Wed May 10 10:09:13 2017
+
+* Version:        2016.4 (Build 1756540 on Mon Jan 23 19:31:01 MST 2017)
+* Project:        Zevenseg
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      8.00|        0.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----------+-----------+-----------+-----------+---------+
+    |        Latency        |        Interval       | Pipeline|
+    |    min    |    max    |    min    |    max    |   Type  |
+    +-----------+-----------+-----------+-----------+---------+
+    |  100000003|  100000003|  100000004|  100000004|   none  |
+    +-----------+-----------+-----------+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----------+-----------+----------+-----------+-----------+-----------+----------+
+        |          |        Latency        | Iteration|  Initiation Interval  |    Trip   |          |
+        | Loop Name|    min    |    max    |  Latency |  achieved |   target  |   Count   | Pipelined|
+        +----------+-----------+-----------+----------+-----------+-----------+-----------+----------+
+        |- Loop 1  |  100000000|  100000000|         1|          -|          -|  100000000|    no    |
+        +----------+-----------+-----------+----------+-----------+-----------+-----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 4
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	4  / (!exitcond)
+* FSM state operations: 
+
+ <State 1>: 6.27ns
+ST_1: sw_read (9)  [1/1] 0.00ns
+_ifconv:4  %sw_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %sw)
+
+ST_1: value_load (10)  [1/1] 0.00ns  loc: Zevenseg.cpp:65
+_ifconv:5  %value_load = load i32* @value_r, align 4
+
+ST_1: tmp (11)  [1/1] 2.44ns  loc: Zevenseg.cpp:65
+_ifconv:6  %tmp = add nsw i32 1, %value_load
+
+ST_1: tmp_1 (12)  [1/1] 0.00ns  loc: Zevenseg.cpp:66
+_ifconv:7  %tmp_1 = call i28 @_ssdm_op_PartSelect.i28.i32.i32.i32(i32 %tmp, i32 4, i32 31)
+
+ST_1: icmp (13)  [1/1] 2.46ns  loc: Zevenseg.cpp:66
+_ifconv:8  %icmp = icmp sgt i28 %tmp_1, 0
+
+ST_1: p_s (14)  [1/1] 0.00ns  loc: Zevenseg.cpp:66 (grouped into LUT with out node value_assign)
+_ifconv:9  %p_s = select i1 %icmp, i32 0, i32 %tmp
+
+ST_1: tmp_3 (15)  [1/1] 0.00ns  loc: Zevenseg.cpp:65
+_ifconv:10  %tmp_3 = trunc i32 %value_load to i31
+
+ST_1: tmp_2 (16)  [1/1] 2.44ns  loc: Zevenseg.cpp:70
+_ifconv:11  %tmp_2 = add nsw i32 -1, %value_load
+
+ST_1: tmp_2_cast (17)  [1/1] 2.44ns  loc: Zevenseg.cpp:71
+_ifconv:12  %tmp_2_cast = add i31 -1, %tmp_3
+
+ST_1: tmp_4 (18)  [1/1] 0.00ns  loc: Zevenseg.cpp:71 (grouped into LUT with out node value_assign)
+_ifconv:13  %tmp_4 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %tmp_2, i32 31)
+
+ST_1: p_1 (19)  [1/1] 0.00ns  loc: Zevenseg.cpp:71 (grouped into LUT with out node value_assign)
+_ifconv:14  %p_1 = select i1 %tmp_4, i31 15, i31 %tmp_2_cast
+
+ST_1: p_1_cast (20)  [1/1] 0.00ns  loc: Zevenseg.cpp:71 (grouped into LUT with out node value_assign)
+_ifconv:15  %p_1_cast = zext i31 %p_1 to i32
+
+ST_1: value_assign (21)  [1/1] 1.37ns  loc: Zevenseg.cpp:76 (out node of the LUT)
+_ifconv:16  %value_assign = select i1 %sw_read, i32 %p_s, i32 %p_1_cast
+
+ST_1: StgValue_18 (22)  [1/1] 0.00ns  loc: Zevenseg.cpp:65
+_ifconv:17  store i32 %value_assign, i32* @value_r, align 4
+
+ST_1: tmp_5 (60)  [1/1] 0.00ns  loc: Zevenseg.cpp:76
+_ifconv:55  %tmp_5 = trunc i32 %value_assign to i4
+
+
+ <State 2>: 8.00ns
+ST_2: tmp_i (23)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:18  %tmp_i = icmp eq i32 %value_assign, 0
+
+ST_2: tmp_1_i (24)  [1/1] 0.00ns  loc: Zevenseg.cpp:75 (grouped into LUT with out node tmp_6_i)
+_ifconv:19  %tmp_1_i = select i1 %tmp_i, i7 -64, i7 0
+
+ST_2: tmp_2_i (25)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:20  %tmp_2_i = icmp eq i32 %value_assign, 1
+
+ST_2: tmp_3_i (26)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:21  %tmp_3_i = icmp eq i32 %value_assign, 2
+
+ST_2: tmp_4_i (27)  [1/1] 0.00ns  loc: Zevenseg.cpp:75 (grouped into LUT with out node tmp_6_i)
+_ifconv:22  %tmp_4_i = select i1 %tmp_3_i, i7 36, i7 -7
+
+ST_2: tmp_5_i (28)  [1/1] 0.00ns  loc: Zevenseg.cpp:76 (grouped into LUT with out node tmp_6_i)
+_ifconv:23  %tmp_5_i = or i1 %tmp_3_i, %tmp_2_i
+
+ST_2: tmp_6_i (29)  [1/1] 1.37ns  loc: Zevenseg.cpp:75 (out node of the LUT)
+_ifconv:24  %tmp_6_i = select i1 %tmp_5_i, i7 %tmp_4_i, i7 %tmp_1_i
+
+ST_2: tmp_7_i (30)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:25  %tmp_7_i = icmp eq i32 %value_assign, 3
+
+ST_2: tmp_8_i (31)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:26  %tmp_8_i = icmp eq i32 %value_assign, 4
+
+ST_2: tmp_9_i_cast_cast (32)  [1/1] 0.00ns  loc: Zevenseg.cpp:75 (grouped into LUT with out node tmp_11_i)
+_ifconv:27  %tmp_9_i_cast_cast = select i1 %tmp_8_i, i7 25, i7 48
+
+ST_2: tmp_10_i (33)  [1/1] 0.00ns  loc: Zevenseg.cpp:76 (grouped into LUT with out node tmp_11_i)
+_ifconv:28  %tmp_10_i = or i1 %tmp_8_i, %tmp_7_i
+
+ST_2: tmp_11_i (34)  [1/1] 1.37ns  loc: Zevenseg.cpp:75 (out node of the LUT)
+_ifconv:29  %tmp_11_i = select i1 %tmp_10_i, i7 %tmp_9_i_cast_cast, i7 %tmp_6_i
+
+ST_2: tmp_12_i (35)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:30  %tmp_12_i = icmp eq i32 %value_assign, 5
+
+ST_2: tmp_13_i (36)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:31  %tmp_13_i = icmp eq i32 %value_assign, 6
+
+ST_2: tmp_14_i_cast_cast (37)  [1/1] 0.00ns  loc: Zevenseg.cpp:75 (grouped into LUT with out node tmp_16_i)
+_ifconv:32  %tmp_14_i_cast_cast = select i1 %tmp_13_i, i7 2, i7 18
+
+ST_2: tmp_15_i (38)  [1/1] 0.00ns  loc: Zevenseg.cpp:76 (grouped into LUT with out node tmp_16_i)
+_ifconv:33  %tmp_15_i = or i1 %tmp_13_i, %tmp_12_i
+
+ST_2: tmp_16_i (39)  [1/1] 1.37ns  loc: Zevenseg.cpp:75 (out node of the LUT)
+_ifconv:34  %tmp_16_i = select i1 %tmp_15_i, i7 %tmp_14_i_cast_cast, i7 %tmp_11_i
+
+ST_2: tmp_17_i (40)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:35  %tmp_17_i = icmp eq i32 %value_assign, 7
+
+ST_2: tmp_18_i (41)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:36  %tmp_18_i = icmp eq i32 %value_assign, 15
+
+ST_2: tmp_19_i_cast_cast (42)  [1/1] 0.00ns  loc: Zevenseg.cpp:75 (grouped into LUT with out node tmp_21_i)
+_ifconv:37  %tmp_19_i_cast_cast = select i1 %tmp_18_i, i7 14, i7 -8
+
+ST_2: tmp_20_i (43)  [1/1] 0.00ns  loc: Zevenseg.cpp:76 (grouped into LUT with out node tmp_21_i)
+_ifconv:38  %tmp_20_i = or i1 %tmp_18_i, %tmp_17_i
+
+ST_2: tmp_21_i (44)  [1/1] 1.37ns  loc: Zevenseg.cpp:75 (out node of the LUT)
+_ifconv:39  %tmp_21_i = select i1 %tmp_20_i, i7 %tmp_19_i_cast_cast, i7 %tmp_16_i
+
+ST_2: tmp_22_i (45)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:40  %tmp_22_i = icmp eq i32 %value_assign, 9
+
+ST_2: tmp_23_i (46)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:41  %tmp_23_i = icmp eq i32 %value_assign, 10
+
+ST_2: tmp_27_i (50)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:45  %tmp_27_i = icmp eq i32 %value_assign, 11
+
+ST_2: tmp_28_i (51)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:46  %tmp_28_i = icmp eq i32 %value_assign, 12
+
+ST_2: tmp_32_i (55)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:50  %tmp_32_i = icmp eq i32 %value_assign, 13
+
+ST_2: tmp_33_i (56)  [1/1] 2.52ns  loc: Zevenseg.cpp:76
+_ifconv:51  %tmp_33_i = icmp eq i32 %value_assign, 14
+
+
+ <State 3>: 4.11ns
+ST_3: StgValue_48 (5)  [1/1] 0.00ns
+_ifconv:0  call void (...)* @_ssdm_op_SpecBitsMap(i1 %sw), !map !33
+
+ST_3: StgValue_49 (6)  [1/1] 0.00ns
+_ifconv:1  call void (...)* @_ssdm_op_SpecBitsMap(i4* %led_V), !map !39
+
+ST_3: StgValue_50 (7)  [1/1] 0.00ns
+_ifconv:2  call void (...)* @_ssdm_op_SpecBitsMap(i7* %display_V), !map !43
+
+ST_3: StgValue_51 (8)  [1/1] 0.00ns
+_ifconv:3  call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @Zevenseg_str) nounwind
+
+ST_3: tmp_24_i_cast_cast (47)  [1/1] 0.00ns  loc: Zevenseg.cpp:75 (grouped into LUT with out node tmp_26_i)
+_ifconv:42  %tmp_24_i_cast_cast = select i1 %tmp_23_i, i7 8, i7 16
+
+ST_3: tmp_25_i (48)  [1/1] 0.00ns  loc: Zevenseg.cpp:76 (grouped into LUT with out node tmp_26_i)
+_ifconv:43  %tmp_25_i = or i1 %tmp_23_i, %tmp_22_i
+
+ST_3: tmp_26_i (49)  [1/1] 1.37ns  loc: Zevenseg.cpp:75 (out node of the LUT)
+_ifconv:44  %tmp_26_i = select i1 %tmp_25_i, i7 %tmp_24_i_cast_cast, i7 %tmp_21_i
+
+ST_3: tmp_29_i (52)  [1/1] 0.00ns  loc: Zevenseg.cpp:75 (grouped into LUT with out node tmp_31_i)
+_ifconv:47  %tmp_29_i = select i1 %tmp_28_i, i7 -58, i7 3
+
+ST_3: tmp_30_i (53)  [1/1] 0.00ns  loc: Zevenseg.cpp:76 (grouped into LUT with out node tmp_31_i)
+_ifconv:48  %tmp_30_i = or i1 %tmp_28_i, %tmp_27_i
+
+ST_3: tmp_31_i (54)  [1/1] 1.37ns  loc: Zevenseg.cpp:75 (out node of the LUT)
+_ifconv:49  %tmp_31_i = select i1 %tmp_30_i, i7 %tmp_29_i, i7 %tmp_26_i
+
+ST_3: tmp_34_i_cast_cast (57)  [1/1] 0.00ns  loc: Zevenseg.cpp:75 (grouped into LUT with out node value_display_i)
+_ifconv:52  %tmp_34_i_cast_cast = select i1 %tmp_33_i, i7 6, i7 33
+
+ST_3: tmp_35_i (58)  [1/1] 0.00ns  loc: Zevenseg.cpp:76 (grouped into LUT with out node value_display_i)
+_ifconv:53  %tmp_35_i = or i1 %tmp_33_i, %tmp_32_i
+
+ST_3: value_display_i (59)  [1/1] 1.37ns  loc: Zevenseg.cpp:75 (out node of the LUT)
+_ifconv:54  %value_display_i = select i1 %tmp_35_i, i7 %tmp_34_i_cast_cast, i7 %tmp_31_i
+
+ST_3: StgValue_61 (61)  [1/1] 1.57ns  loc: Zevenseg.cpp:74
+_ifconv:56  br label %0
+
+
+ <State 4>: 2.44ns
+ST_4: i (63)  [1/1] 0.00ns
+:0  %i = phi i27 [ 0, %_ifconv ], [ %i_1, %1 ]
+
+ST_4: exitcond (64)  [1/1] 2.44ns  loc: Zevenseg.cpp:74
+:1  %exitcond = icmp eq i27 %i, -34217728
+
+ST_4: empty (65)  [1/1] 0.00ns
+:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100000000, i64 100000000, i64 100000000)
+
+ST_4: i_1 (66)  [1/1] 2.32ns  loc: Zevenseg.cpp:74
+:3  %i_1 = add i27 %i, 1
+
+ST_4: StgValue_66 (67)  [1/1] 0.00ns  loc: Zevenseg.cpp:74
+:4  br i1 %exitcond, label %2, label %1
+
+ST_4: StgValue_67 (69)  [1/1] 0.00ns  loc: Zevenseg.cpp:75
+:0  call void @_ssdm_op_Write.ap_auto.i7P(i7* %display_V, i7 %value_display_i)
+
+ST_4: StgValue_68 (70)  [1/1] 0.00ns  loc: Zevenseg.cpp:76
+:1  call void @_ssdm_op_Write.ap_auto.i4P(i4* %led_V, i4 %tmp_5)
+
+ST_4: StgValue_69 (71)  [1/1] 0.00ns  loc: Zevenseg.cpp:74
+:2  br label %0
+
+ST_4: StgValue_70 (73)  [1/1] 0.00ns  loc: Zevenseg.cpp:78
+:0  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 0ns.
+
+ <State 1>: 6.27ns
+The critical path consists of the following:
+	'load' operation ('value_load', Zevenseg.cpp:65) on static variable 'value_r' [10]  (0 ns)
+	'add' operation ('tmp', Zevenseg.cpp:65) [11]  (2.44 ns)
+	'icmp' operation ('icmp', Zevenseg.cpp:66) [13]  (2.46 ns)
+	'select' operation ('p_s', Zevenseg.cpp:66) [14]  (0 ns)
+	'select' operation ('value', Zevenseg.cpp:76) [21]  (1.37 ns)
+
+ <State 2>: 8ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_i', Zevenseg.cpp:76) [23]  (2.52 ns)
+	'select' operation ('tmp_1_i', Zevenseg.cpp:75) [24]  (0 ns)
+	'select' operation ('tmp_6_i', Zevenseg.cpp:75) [29]  (1.37 ns)
+	'select' operation ('tmp_11_i', Zevenseg.cpp:75) [34]  (1.37 ns)
+	'select' operation ('tmp_16_i', Zevenseg.cpp:75) [39]  (1.37 ns)
+	'select' operation ('tmp_21_i', Zevenseg.cpp:75) [44]  (1.37 ns)
+
+ <State 3>: 4.11ns
+The critical path consists of the following:
+	'select' operation ('tmp_24_i_cast_cast', Zevenseg.cpp:75) [47]  (0 ns)
+	'select' operation ('tmp_26_i', Zevenseg.cpp:75) [49]  (1.37 ns)
+	'select' operation ('tmp_31_i', Zevenseg.cpp:75) [54]  (1.37 ns)
+	'select' operation ('value_display_i', Zevenseg.cpp:75) [59]  (1.37 ns)
+
+ <State 4>: 2.44ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', Zevenseg.cpp:74) [63]  (0 ns)
+	'icmp' operation ('exitcond', Zevenseg.cpp:74) [64]  (2.44 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

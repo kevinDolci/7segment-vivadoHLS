@@ -1,0 +1,252 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Fri Mar 31 10:52:41 2017
+# Process ID: 13720
+# Current directory: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9228 C:\Users\11401393\Desktop\bachelorproef\VivadoHLS\Demo\ZevensegBD\ZevensegBD.xpr
+# Log file: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/vivado.log
+# Journal file: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.xpr
+open_bd_design {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd}
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+delete_bd_objs [get_bd_nets sw_1] [get_bd_ports sw]
+delete_bd_objs [get_bd_nets buttons_1] [get_bd_ports buttons]
+startgroup
+create_bd_port -dir I -from 0 -to 0 -type data sw
+set_property CONFIG.LAYERED_METADATA [get_property CONFIG.LAYERED_METADATA [get_bd_pins Zevenseg_0/sw]] [get_bd_ports sw]
+connect_bd_net [get_bd_pins /Zevenseg_0/sw] [get_bd_ports sw]
+endgroup
+connect_bd_net [get_bd_pins Zevenseg_0/value_r_o] [get_bd_pins Zevenseg_0/prev_value]
+validate_bd_design
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+delete_bd_objs [get_bd_nets Zevenseg_0_value_r_o]
+connect_bd_net [get_bd_pins Zevenseg_0/value_r_o] [get_bd_pins Zevenseg_0/value_r_i]
+validate_bd_design
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+set_property location {665 -76} [get_bd_ports sw]
+connect_bd_net [get_bd_ports sw] [get_bd_pins Zevenseg_0/sw_V_dout]
+connect_bd_net [get_bd_ports led] [get_bd_pins Zevenseg_0/led_V]
+connect_bd_net [get_bd_ports display] [get_bd_pins Zevenseg_0/display_V]
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+set_property location {-36 156} [get_bd_ports sw]
+connect_bd_net [get_bd_ports sw] [get_bd_pins Zevenseg_0/sw]
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]

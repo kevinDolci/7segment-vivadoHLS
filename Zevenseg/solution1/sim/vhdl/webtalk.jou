@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue May 09 11:03:13 2017
+# Process ID: 9864
+# Current directory: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/sim/vhdl
+# Command line: wbtcv.exe -mode batch -source C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/sim/vhdl/xsim.dir/Zevenseg/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/sim/vhdl/webtalk.log
+# Journal file: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/sim/vhdl\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/sim/vhdl/xsim.dir/Zevenseg/webtalk/xsim_webtalk.tcl -notrace

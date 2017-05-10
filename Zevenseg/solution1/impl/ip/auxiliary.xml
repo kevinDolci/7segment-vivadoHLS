@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="Zevenseg" xd:componentRef="Zevenseg" xd:initiationInterval="100000004" xd:clockPeriod="8.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="sw" xd:originalName="sw" xd:direction="in" xd:interfaceRef="sw" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(led)" xd:originalName="led" xd:direction="out" xd:interfaceRef="led_V" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="4"/>
+  <xd:arg xd:name="*(display)" xd:originalName="display" xd:direction="out" xd:interfaceRef="display_V" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="7"/>
+  <xd:latencyEstimates xd:best-case="100000003" xd:worst-case="100000003" xd:average-case="100000003"/>
+  <xd:resourceEstimates xd:LUT="533" xd:FF="119" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

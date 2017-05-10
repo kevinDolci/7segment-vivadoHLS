@@ -1,0 +1,922 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Fri Mar 31 10:52:41 2017
+# Process ID: 13720
+# Current directory: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9228 C:\Users\11401393\Desktop\bachelorproef\VivadoHLS\Demo\ZevensegBD\ZevensegBD.xpr
+# Log file: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/vivado.log
+# Journal file: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_Zevenseg_0_0
+
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 769.461 ; gain = 124.023
+open_bd_design {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding cell -- xilinx.com:hls:Zevenseg:1.0 - Zevenseg_0
+Successfully read diagram <design_1> from BD file <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 787.883 ; gain = 18.422
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_Zevenseg_0_0 (Zevenseg 1.0) from revision 1703291131 to revision 1703311052
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'buttons'
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'prev_value' (xilinx.com:signal:data:1.0)
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'value_r_i' (xilinx.com:signal:data:1.0)
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'value_r_o' (xilinx.com:signal:data:1.0)
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'buttons'
+WARNING: [IP_Flow 19-4706] Upgraded port 'sw' width 1 differs from original width 4
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'prev_value'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'value_r_i'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'value_r_o'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'value_r_o_ap_vld'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_Zevenseg_0_0'.
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_Zevenseg_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'buttons' is not found on the upgraded version of the cell '/Zevenseg_0'. Its connection to the net 'buttons_1' has been removed.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'IP design_1_Zevenseg_0_0' has identified issues that may require user intervention. Please review the upgrade log 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+delete_bd_objs [get_bd_nets sw_1] [get_bd_ports sw]
+delete_bd_objs [get_bd_nets buttons_1] [get_bd_ports buttons]
+startgroup
+create_bd_port -dir I -from 0 -to 0 -type data sw
+set_property CONFIG.LAYERED_METADATA [get_property CONFIG.LAYERED_METADATA [get_bd_pins Zevenseg_0/sw]] [get_bd_ports sw]
+connect_bd_net [get_bd_pins /Zevenseg_0/sw] [get_bd_ports sw]
+endgroup
+connect_bd_net [get_bd_pins Zevenseg_0/value_r_o] [get_bd_pins Zevenseg_0/prev_value]
+validate_bd_design
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/Zevenseg_0/value_r_i
+
+save_bd_design
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/Zevenseg_0/value_r_i
+
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Zevenseg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+[Fri Mar 31 10:55:42 2017] Launched design_1_Zevenseg_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_Zevenseg_0_0_synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1/runme.log
+synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1/runme.log
+[Fri Mar 31 10:55:42 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279787424A
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip/component.xml. It will be created.
+close_hw
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_Zevenseg_0_0 (Zevenseg 1.0) from revision 1703311052 to revision 1703311113
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'prev_value'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'prev_value'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_Zevenseg_0_0'.
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_Zevenseg_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'prev_value' is not found on the upgraded version of the cell '/Zevenseg_0'. Its connection to the net 'Zevenseg_0_value_r_o' has been removed.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'IP design_1_Zevenseg_0_0' has identified issues that may require user intervention. Please review the upgrade log 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+delete_bd_objs [get_bd_nets Zevenseg_0_value_r_o]
+connect_bd_net [get_bd_pins Zevenseg_0/value_r_o] [get_bd_pins Zevenseg_0/value_r_i]
+validate_bd_design
+save_bd_design
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Zevenseg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+[Fri Mar 31 11:15:43 2017] Launched design_1_Zevenseg_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_Zevenseg_0_0_synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1/runme.log
+synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1/runme.log
+[Fri Mar 31 11:15:43 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Fri Mar 31 11:22:02 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Fri Mar 31 11:25:18 2017] Launched synth_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1/runme.log
+[Fri Mar 31 11:25:18 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279787424A
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+close_hw
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip/component.xml. It will be created.
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_Zevenseg_0_0 (Zevenseg 1.0) from revision 1703311113 to revision 1703311145
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'value_r_i'
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'value_r_o'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'value_r_i'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'value_r_o'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'value_r_o_ap_vld'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_Zevenseg_0_0'.
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_Zevenseg_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'value_r_i' is not found on the upgraded version of the cell '/Zevenseg_0'. Its connection to the net 'Zevenseg_0_value_r_o' has been removed.
+CRITICAL WARNING: [BD 41-1167] The pin 'value_r_o' is not found on the upgraded version of the cell '/Zevenseg_0'. Its connection to the net 'Zevenseg_0_value_r_o' has been removed.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'IP design_1_Zevenseg_0_0' has identified issues that may require user intervention. Please review the upgrade log 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [BD 41-166] The net:Zevenseg_0_value_r_o is not connected to a valid source.
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Zevenseg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+[Fri Mar 31 11:46:34 2017] Launched design_1_Zevenseg_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_Zevenseg_0_0_synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1/runme.log
+synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1/runme.log
+[Fri Mar 31 11:46:34 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279787424A
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip/component.xml. It will be created.
+close_hw
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip/component.xml. It will be created.
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_Zevenseg_0_0 (Zevenseg 1.0) from revision 1703311145 to revision 1703311224
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [BD 41-166] The net:Zevenseg_0_value_r_o is not connected to a valid source.
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Zevenseg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+[Fri Mar 31 12:25:31 2017] Launched design_1_Zevenseg_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_Zevenseg_0_0_synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1/runme.log
+synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1/runme.log
+[Fri Mar 31 12:25:31 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279787424A
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip/component.xml. It will be created.
+close_hw
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_Zevenseg_0_0 (Zevenseg 1.0) from revision 1703311224 to revision 1703311229
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [BD 41-166] The net:Zevenseg_0_value_r_o is not connected to a valid source.
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Zevenseg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+[Fri Mar 31 12:30:17 2017] Launched design_1_Zevenseg_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_Zevenseg_0_0_synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1/runme.log
+synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1/runme.log
+[Fri Mar 31 12:30:17 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279787424A
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip/component.xml. It will be created.
+close_hw
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_Zevenseg_0_0 (Zevenseg 1.0) from revision 1703311229 to revision 1703311238
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [BD 41-166] The net:Zevenseg_0_value_r_o is not connected to a valid source.
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Zevenseg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+[Fri Mar 31 12:38:59 2017] Launched design_1_Zevenseg_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_Zevenseg_0_0_synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1/runme.log
+synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1/runme.log
+[Fri Mar 31 12:38:59 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279787424A
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210279787424A.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Fri Mar 31 14:00:02 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Fri Mar 31 14:00:29 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210279787424A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279787424A
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip/component.xml. It will be created.
+close_hw
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_Zevenseg_0_0 (Zevenseg 1.0) from revision 1703311238 to revision 1703311403
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [BD 41-166] The net:Zevenseg_0_value_r_o is not connected to a valid source.
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Zevenseg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:01:02 . Memory (MB): peak = 1226.156 ; gain = 0.000
+INFO: [Common 17-344] 'launch_runs' was cancelled
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279787424A
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Fri Mar 31 14:14:44 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Fri Mar 31 14:15:03 2017] Launched synth_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1/runme.log
+[Fri Mar 31 14:15:03 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip/component.xml. It will be created.
+close_hw
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_Zevenseg_0_0 (Zevenseg 1.0) from revision 1703311403 to revision 1703311425
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [BD 41-166] The net:Zevenseg_0_value_r_o is not connected to a valid source.
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Zevenseg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+[Fri Mar 31 14:26:24 2017] Launched design_1_Zevenseg_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_Zevenseg_0_0_synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1/runme.log
+synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1/runme.log
+[Fri Mar 31 14:26:24 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279787424A
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip/component.xml. It will be created.
+close_hw
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_Zevenseg_0_0 (Zevenseg 1.0) from revision 1703311425 to revision 1703311453
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'display'
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'led'
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'sw'
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'display_V' (xilinx.com:signal:data:1.0)
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'led_V' (xilinx.com:signal:data:1.0)
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'sw_V' (xilinx.com:interface:acc_fifo_read:1.0)
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'display'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'display_ap_vld'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'led'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'led_ap_vld'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'sw'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'display_V'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'display_V_ap_vld'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'led_V'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'led_V_ap_vld'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'sw_V_dout'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'sw_V_empty_n'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'sw_V_read'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_Zevenseg_0_0'.
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_Zevenseg_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'sw' is not found on the upgraded version of the cell '/Zevenseg_0'. Its connection to the net 'sw_1' has been removed.
+CRITICAL WARNING: [BD 41-1167] The pin 'led' is not found on the upgraded version of the cell '/Zevenseg_0'. Its connection to the net 'Zevenseg_0_led' has been removed.
+CRITICAL WARNING: [BD 41-1167] The pin 'display' is not found on the upgraded version of the cell '/Zevenseg_0'. Its connection to the net 'Zevenseg_0_display' has been removed.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'IP design_1_Zevenseg_0_0' has identified issues that may require user intervention. Please review the upgrade log 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+WARNING: [BD 41-597] NET <Zevenseg_0_display> has no source
+WARNING: [BD 41-597] NET <Zevenseg_0_led> has no source
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+set_property location {665 -76} [get_bd_ports sw]
+connect_bd_net [get_bd_ports sw] [get_bd_pins Zevenseg_0/sw_V_dout]
+WARNING: [BD 41-1306] The connection to interface pin /Zevenseg_0/sw_V_dout is being overridden by the user. This pin will not be connected as a part of interface connection sw_V
+connect_bd_net [get_bd_ports led] [get_bd_pins Zevenseg_0/led_V]
+connect_bd_net [get_bd_ports display] [get_bd_pins Zevenseg_0/display_V]
+regenerate_bd_layout
+validate_bd_design
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/Zevenseg_0/sw_V_empty_n
+
+save_bd_design
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/Zevenseg_0/sw_V_empty_n
+
+WARNING: [BD 41-166] The net:Zevenseg_0_value_r_o is not connected to a valid source.
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Zevenseg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+[Fri Mar 31 14:56:47 2017] Launched design_1_Zevenseg_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_Zevenseg_0_0_synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1/runme.log
+synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1/runme.log
+[Fri Mar 31 14:56:47 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279787424A
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210279787424A.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip/component.xml. It will be created.
+close_hw
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/Zevenseg/solution1/impl/ip'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:hls:Zevenseg:1.0 [get_ips  design_1_Zevenseg_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_Zevenseg_0_0 (Zevenseg 1.0) from revision 1703311453 to revision 1703311529
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'sw_V'
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'sw' (xilinx.com:signal:data:1.0)
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'sw_V_dout'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'sw_V_empty_n'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'sw_V_read'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'sw'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_Zevenseg_0_0'.
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_Zevenseg_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'sw_V_dout' is not found on the upgraded version of the cell '/Zevenseg_0'. Its connection to the net 'sw_1' has been removed.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'IP design_1_Zevenseg_0_0' has identified issues that may require user intervention. Please review the upgrade log 'c:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_Zevenseg_0_0] -no_script -sync -force -quiet
+set_property location {-36 156} [get_bd_ports sw]
+connect_bd_net [get_bd_ports sw] [get_bd_pins Zevenseg_0/sw]
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+WARNING: [BD 41-597] NET <Zevenseg_0_value_r_o> has no source
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-166] The net:Zevenseg_0_value_r_o is not connected to a valid source.
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Zevenseg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+[Fri Mar 31 15:30:37 2017] Launched design_1_Zevenseg_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_Zevenseg_0_0_synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/design_1_Zevenseg_0_0_synth_1/runme.log
+synth_1: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/synth_1/runme.log
+[Fri Mar 31 15:30:37 2017] Launched impl_1...
+Run output will be captured here: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279787424A
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210279787424A.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210279787424A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279787424A
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 31 16:05:08 2017...

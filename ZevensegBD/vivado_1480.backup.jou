@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Apr 13 14:08:12 2017
+# Process ID: 1480
+# Current directory: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1072 C:\Users\11401393\Desktop\bachelorproef\VivadoHLS\Demo\ZevensegBD\ZevensegBD.xpr
+# Log file: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/vivado.log
+# Journal file: C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.xpr
+open_bd_design {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.srcs/sources_1/bd/design_1/design_1.bd}
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+current_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROGRAM.FILE {C:/Users/11401393/Desktop/bachelorproef/VivadoHLS/Demo/ZevensegBD/ZevensegBD.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices xc7z010_1] 0]
+program_hw_devices [lindex [get_hw_devices xc7z010_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]

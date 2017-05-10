@@ -1,0 +1,39 @@
+INFO: [SIM 2] *************** CSIM start ***************
+WARNING: [SIM 51] HLS only supports CLANG compiler in Linux.
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../Zevenseg.cpp in debug mode
+   Generating csim.exe
+sw: 0,led: 15,display: 14
+sw: 0,led: 14,display: 6
+sw: 0,led: 13,display: 33
+sw: 0,led: 12,display: 70
+sw: 0,led: 11,display: 3
+sw: 0,led: 10,display: 8
+sw: 0,led: 9,display: 16
+sw: 0,led: 8,display: 0
+sw: 0,led: 7,display: 120
+sw: 0,led: 6,display: 2
+sw: 0,led: 5,display: 18
+sw: 0,led: 4,display: 25
+sw: 0,led: 3,display: 48
+sw: 0,led: 2,display: 36
+sw: 0,led: 1,display: 121
+sw: 0,led: 0,display: 64
+sw: 1,led: 1,display: 121
+sw: 1,led: 2,display: 36
+sw: 1,led: 3,display: 48
+sw: 1,led: 4,display: 25
+sw: 1,led: 5,display: 18
+sw: 1,led: 6,display: 2
+sw: 1,led: 7,display: 120
+sw: 1,led: 8,display: 0
+sw: 1,led: 9,display: 16
+sw: 1,led: 10,display: 8
+sw: 1,led: 11,display: 3
+sw: 1,led: 12,display: 70
+sw: 1,led: 13,display: 33
+sw: 1,led: 14,display: 6
+sw: 1,led: 15,display: 14
+sw: 1,led: 0,display: 64
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

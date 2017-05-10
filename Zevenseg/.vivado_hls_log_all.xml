@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'value_r' is power-on initialization." projectName="Zevenseg" solutionName="solution1" date="2017-05-10T10:09:13.925+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'Zevenseg/value' to 'Zevenseg/value_r' to avoid the conflict with HDL keywords or other object names." projectName="Zevenseg" solutionName="solution1" date="2017-05-10T10:09:13.455+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
