@@ -71,7 +71,7 @@ void Zevenseg(bool sw, ap_uint<4> *led, ap_uint<7> *display) {
 		if(value < 0) value = 15;
 	}
 
-	for (i = 0; i < 100000000; i++){
+	for (i = 0; i < 125000000; i++){
 		*display = zevenseg_output(value);
 		*led = value;
 	}
